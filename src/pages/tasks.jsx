@@ -73,7 +73,7 @@ export default function Tasks(props) {
       setLoading(false);
     }
   };
-  const filteredTasks = tasks.filter(t => t.title.toLowerCase().includes(searchQuery.toLowerCase()) || t.description.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredTasks = tasks.filter(t => t.title && t.title.toLowerCase().includes(searchQuery.toLowerCase()) || t.description && t.description.toLowerCase().includes(searchQuery.toLowerCase()));
   const pendingTasks = filteredTasks.filter(t => t.status === 'pending');
   const inProgressTasks = filteredTasks.filter(t => t.status === 'in_progress');
   const completedTasks = filteredTasks.filter(t => t.status === 'completed');
