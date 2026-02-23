@@ -1,0 +1,16 @@
+{
+  "name": "users",
+  "title": "用户",
+  "schemas": [
+    {
+      "name": "username",
+      "title": "用户名",
+      "type": "String"
+    },
+    {
+      "name": "role",
+      "title": "角色类型",
+      "type": "String"
+    }
+  ]
+}

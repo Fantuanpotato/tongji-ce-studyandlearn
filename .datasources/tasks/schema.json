@@ -1,0 +1,32 @@
+{
+  "name": "tasks",
+  "title": "任务",
+  "schemas": [
+    {
+      "name": "title",
+      "title": "任务名称",
+      "type": "String"
+    },
+    {
+      "name": "assignee",
+      "title": "负责人",
+      "type": "String"
+    },
+    {
+      "name": "dueDate",
+      "title": "截止日期",
+      "type": "Date",
+      "format": "date"
+    },
+    {
+      "name": "status",
+      "title": "任务状态",
+      "type": "String"
+    },
+    {
+      "name": "description",
+      "title": "备注",
+      "type": "String"
+    }
+  ]
+}

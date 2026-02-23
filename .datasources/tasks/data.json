@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "1",
+    "title": "完成论文初稿",
+    "assignee": "张三",
+    "dueDate": "2026-03-01",
+    "status": "in_progress",
+    "description": "完成ICML投稿论文的初稿撰写",
+    "createdAt": 1740192000000,
+    "updatedAt": 1740192000000
+  },
+  {
+    "_id": "2",
+    "title": "整理实验数据",
+    "assignee": "李四",
+    "dueDate": "2026-02-26",
+    "status": "pending",
+    "description": "整理上周的实验数据并制作图表",
+    "createdAt": 1740278400000,
+    "updatedAt": 1740278400000
+  },
+  {
+    "_id": "3",
+    "title": "准备组会汇报",
+    "assignee": "王五",
+    "dueDate": "2026-02-25",
+    "status": "pending",
+    "description": "准备本周组会的汇报PPT",
+    "createdAt": 1740364800000,
+    "updatedAt": 1740364800000
+  },
+  {
+    "_id": "4",
+    "title": "阅读文献综述",
+    "assignee": "张三",
+    "dueDate": "2026-02-20",
+    "status": "completed",
+    "description": "阅读并总结最新的相关文献",
+    "createdAt": 1740019200000,
+    "updatedAt": 1740019200000
+  },
+  {
+    "_id": "5",
+    "title": "提交实验报告",
+    "assignee": "李四",
+    "dueDate": "2026-02-28",
+    "status": "in_progress",
+    "description": "提交本月的实验报告",
+    "createdAt": 1740105600000,
+    "updatedAt": 1740105600000
+  }
+]

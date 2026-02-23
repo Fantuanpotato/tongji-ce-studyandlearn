@@ -1,0 +1,42 @@
+{
+  "name": "files",
+  "title": "文件",
+  "schemas": [
+    {
+      "name": "name",
+      "title": "文件名称",
+      "type": "String"
+    },
+    {
+      "name": "type",
+      "title": "文件类型",
+      "type": "String"
+    },
+    {
+      "name": "file",
+      "title": "文件上传",
+      "type": "File"
+    },
+    {
+      "name": "url",
+      "title": "外部链接",
+      "type": "Url"
+    },
+    {
+      "name": "uploader",
+      "title": "上传人",
+      "type": "String"
+    },
+    {
+      "name": "uploadDate",
+      "title": "上传时间",
+      "type": "Date",
+      "format": "date"
+    },
+    {
+      "name": "description",
+      "title": "描述",
+      "type": "String"
+    }
+  ]
+}

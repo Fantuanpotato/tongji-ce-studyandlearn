@@ -1,0 +1,50 @@
+{
+  "name": "events",
+  "title": "活动",
+  "schemas": [
+    {
+      "name": "title",
+      "title": "事件标题",
+      "type": "String"
+    },
+    {
+      "name": "startDate",
+      "title": "开始日期",
+      "type": "Date",
+      "format": "date"
+    },
+    {
+      "name": "startTime",
+      "title": "开始时间",
+      "type": "DateTime",
+      "format": "timestamp-s"
+    },
+    {
+      "name": "endDate",
+      "title": "结束日期",
+      "type": "Date",
+      "format": "date"
+    },
+    {
+      "name": "endTime",
+      "title": "结束时间",
+      "type": "DateTime",
+      "format": "timestamp-s"
+    },
+    {
+      "name": "location",
+      "title": "地点",
+      "type": "String"
+    },
+    {
+      "name": "description",
+      "title": "备注",
+      "type": "String"
+    },
+    {
+      "name": "creator",
+      "title": "创建人",
+      "type": "String"
+    }
+  ]
+}

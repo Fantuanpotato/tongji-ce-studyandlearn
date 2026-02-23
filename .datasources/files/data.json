@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "1",
+    "name": "研究计划书.docx",
+    "type": "file",
+    "file": "https://example.com/files/research-plan.docx",
+    "url": null,
+    "uploader": "张三",
+    "uploadDate": "2026-02-24",
+    "description": "2026年度研究计划",
+    "createdAt": 1740364800000,
+    "updatedAt": 1740364800000
+  },
+  {
+    "_id": "2",
+    "name": "实验数据.xlsx",
+    "type": "file",
+    "file": "https://example.com/files/experiment-data.xlsx",
+    "url": null,
+    "uploader": "李四",
+    "uploadDate": "2026-02-23",
+    "description": "最新实验数据",
+    "createdAt": 1740278400000,
+    "updatedAt": 1740278400000
+  },
+  {
+    "_id": "3",
+    "name": "论文初稿.pdf",
+    "type": "file",
+    "file": "https://example.com/files/paper-draft.pdf",
+    "url": null,
+    "uploader": "王五",
+    "uploadDate": "2026-02-22",
+    "description": "ICML投稿论文初稿",
+    "createdAt": 1740192000000,
+    "updatedAt": 1740192000000
+  },
+  {
+    "_id": "4",
+    "name": "会议记录",
+    "type": "link",
+    "file": null,
+    "url": "https://example.com/meeting-notes",
+    "uploader": "张教授",
+    "uploadDate": "2026-02-21",
+    "description": "上周组会会议记录",
+    "createdAt": 1740105600000,
+    "updatedAt": 1740105600000
+  },
+  {
+    "_id": "5",
+    "name": "参考文献库",
+    "type": "link",
+    "file": null,
+    "url": "https://example.com/references",
+    "uploader": "李四",
+    "uploadDate": "2026-02-20",
+    "description": "课题组共享参考文献",
+    "createdAt": 1740019200000,
+    "updatedAt": 1740019200000
+  }
+]

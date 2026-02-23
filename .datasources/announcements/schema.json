@@ -1,0 +1,32 @@
+{
+  "name": "announcements",
+  "title": "公告",
+  "schemas": [
+    {
+      "name": "title",
+      "title": "标题",
+      "type": "String"
+    },
+    {
+      "name": "content",
+      "title": "内容",
+      "type": "RichText"
+    },
+    {
+      "name": "author",
+      "title": "发布人",
+      "type": "String"
+    },
+    {
+      "name": "date",
+      "title": "发布时间",
+      "type": "Date",
+      "format": "date"
+    },
+    {
+      "name": "isPinned",
+      "title": "是否置顶",
+      "type": "Boolean"
+    }
+  ]
+}
