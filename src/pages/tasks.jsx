@@ -20,7 +20,8 @@ export default function Tasks(props) {
     title: '',
     description: '',
     priority: 'medium',
-    dueDate: ''
+    dueDate: '',
+    assignee: ''
   });
   const currentUser = props.$w.auth.currentUser;
   const {
@@ -92,7 +93,8 @@ export default function Tasks(props) {
       title: '',
       description: '',
       priority: 'medium',
-      dueDate: ''
+      dueDate: '',
+      assignee: currentUser?.name || ''
     });
     setIsDialogOpen(true);
   };
@@ -102,7 +104,8 @@ export default function Tasks(props) {
       title: task.title,
       description: task.description,
       priority: task.priority || 'medium',
-      dueDate: task.dueDate || ''
+      dueDate: task.dueDate || '',
+      assignee: task.assignee || ''
     });
     setIsDialogOpen(true);
   };
@@ -195,7 +198,8 @@ export default function Tasks(props) {
               title: formData.title,
               description: formData.description,
               priority: formData.priority,
-              dueDate: formData.dueDate
+              dueDate: formData.dueDate,
+              assignee: formData.assignee
             },
             filter: {
               where: {
@@ -213,7 +217,8 @@ export default function Tasks(props) {
           title: formData.title,
           description: formData.description,
           priority: formData.priority,
-          dueDate: formData.dueDate
+          dueDate: formData.dueDate,
+          assignee: formData.assignee
         } : t));
         toast({
           title: '更新成功',
@@ -231,7 +236,7 @@ export default function Tasks(props) {
               status: 'pending',
               priority: formData.priority,
               dueDate: formData.dueDate,
-              assignee: currentUser?.name || '用户'
+              assignee: formData.assignee || currentUser?.name || '用户'
             }
           }
         });
@@ -242,7 +247,7 @@ export default function Tasks(props) {
           status: 'pending',
           priority: formData.priority,
           dueDate: formData.dueDate,
-          assignee: currentUser?.name || '用户'
+          assignee: formData.assignee || currentUser?.name || '用户'
         };
         setTasks([newTask, ...tasks]);
         toast({
@@ -395,6 +400,15 @@ export default function Tasks(props) {
               <Input placeholder="请输入任务标题" value={formData.title} onChange={e => setFormData({
               ...formData,
               title: e.target.value
+            })} />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                负责人
+              </label>
+              <Input placeholder="请输入负责人姓名" value={formData.assignee} onChange={e => setFormData({
+              ...formData,
+              assignee: e.target.value
             })} />
             </div>
             <div>

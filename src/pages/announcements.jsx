@@ -18,7 +18,8 @@ export default function Announcements(props) {
   const [announcements, setAnnouncements] = useState([]);
   const [formData, setFormData] = useState({
     title: '',
-    content: ''
+    content: '',
+    author: ''
   });
   const currentUser = props.$w.auth.currentUser;
   const {
@@ -77,7 +78,8 @@ export default function Announcements(props) {
     setEditingAnnouncement(null);
     setFormData({
       title: '',
-      content: ''
+      content: '',
+      author: currentUser?.name || ''
     });
     setIsDialogOpen(true);
   };
@@ -85,7 +87,8 @@ export default function Announcements(props) {
     setEditingAnnouncement(announcement);
     setFormData({
       title: announcement.title,
-      content: announcement.content
+      content: announcement.content,
+      author: announcement.author || ''
     });
     setIsDialogOpen(true);
   };
@@ -178,7 +181,8 @@ export default function Announcements(props) {
           params: {
             data: {
               title: formData.title,
-              content: formData.content
+              content: formData.content,
+              author: formData.author
             },
             filter: {
               where: {
@@ -194,7 +198,8 @@ export default function Announcements(props) {
         setAnnouncements(announcements.map(a => a._id === editingAnnouncement._id ? {
           ...a,
           title: formData.title,
-          content: formData.content
+          content: formData.content,
+          author: formData.author
         } : a));
         toast({
           title: '更新成功',
@@ -209,7 +214,7 @@ export default function Announcements(props) {
             data: {
               title: formData.title,
               content: formData.content,
-              author: currentUser?.name || '用户',
+              author: formData.author || currentUser?.name || '用户',
               date: new Date().toISOString().split('T')[0],
               isPinned: false
             }
@@ -220,7 +225,7 @@ export default function Announcements(props) {
           title: formData.title,
           content: formData.content,
           date: new Date().toISOString().split('T')[0],
-          author: currentUser?.name || '用户',
+          author: formData.author || currentUser?.name || '用户',
           isPinned: false
         };
         setAnnouncements([newAnnouncement, ...announcements]);
@@ -328,6 +333,15 @@ export default function Announcements(props) {
               <Input placeholder="请输入公告标题" value={formData.title} onChange={e => setFormData({
               ...formData,
               title: e.target.value
+            })} />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                发布人
+              </label>
+              <Input placeholder="请输入发布人姓名" value={formData.author} onChange={e => setFormData({
+              ...formData,
+              author: e.target.value
             })} />
             </div>
             <div>
