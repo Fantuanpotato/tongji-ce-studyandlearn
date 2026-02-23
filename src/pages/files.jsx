@@ -71,7 +71,7 @@ export default function Files(props) {
       setLoading(false);
     }
   };
-  const filteredFiles = files.filter(f => f.name.toLowerCase().includes(searchQuery.toLowerCase()) || f.description.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredFiles = files.filter(f => f.name && f.name.toLowerCase().includes(searchQuery.toLowerCase()) || f.description && f.description.toLowerCase().includes(searchQuery.toLowerCase()));
   const fileItems = filteredFiles.filter(f => f.type === 'file');
   const linkItems = filteredFiles.filter(f => f.type === 'link');
   const handleAddFile = () => {

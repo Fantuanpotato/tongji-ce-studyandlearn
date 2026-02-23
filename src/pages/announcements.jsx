@@ -73,7 +73,7 @@ export default function Announcements(props) {
       setLoading(false);
     }
   };
-  const filteredAnnouncements = announcements.filter(a => a.title.toLowerCase().includes(searchQuery.toLowerCase()) || a.content.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredAnnouncements = announcements.filter(a => a.title && a.title.toLowerCase().includes(searchQuery.toLowerCase()) || a.content && a.content.toLowerCase().includes(searchQuery.toLowerCase()));
   const handleCreate = () => {
     setEditingAnnouncement(null);
     setFormData({
